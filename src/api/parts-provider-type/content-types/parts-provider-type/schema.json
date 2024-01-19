@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parts_provider_types",
+  "info": {
+    "singularName": "parts-provider-type",
+    "pluralName": "parts-provider-types",
+    "displayName": "PartsProviderType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "uuid": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}

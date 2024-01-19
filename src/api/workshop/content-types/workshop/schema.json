@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workshops",
+  "info": {
+    "singularName": "workshop",
+    "pluralName": "workshops",
+    "displayName": "Workshop"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "WORKSHOP_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "OWNER_NAME": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "ADDRESS": {
+      "type": "text",
+      "required": true
+    },
+    "GST": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "POC1_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "POC1_CONTACT": {
+      "type": "string",
+      "required": true
+    },
+    "POC2_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "POC2_CONTACT": {
+      "type": "string",
+      "required": true
+    },
+    "OWNER_EMAIL": {
+      "type": "email",
+      "required": true
+    },
+    "BLANK_CHEQUE": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "OWNER_AADHAR_CARD": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "PAN_CARD": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "WORKSHOP_INDOOR_PHOTOS": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "WORKSHOP_FRONT_PHOTOS": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

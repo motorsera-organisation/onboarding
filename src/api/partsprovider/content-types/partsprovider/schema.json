@@ -1,0 +1,161 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partsproviders",
+  "info": {
+    "singularName": "partsprovider",
+    "pluralName": "partsproviders",
+    "displayName": "PartsProvider",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "company_legal_name": {
+      "type": "string"
+    },
+    "gstno": {
+      "type": "string",
+      "required": true
+    },
+    "company_type": {
+      "type": "enumeration",
+      "enum": [
+        "company",
+        "individual",
+        "firm"
+      ],
+      "default": "company",
+      "required": true
+    },
+    "director_name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "landmark": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "poc1_contact_number": {
+      "type": "string",
+      "required": true
+    },
+    "poc2_contact_number": {
+      "type": "string",
+      "required": true
+    },
+    "bank_name": {
+      "type": "string",
+      "required": true
+    },
+    "bank_account_no": {
+      "type": "string",
+      "required": true
+    },
+    "bank_ifsc_code": {
+      "type": "string",
+      "required": true
+    },
+    "bank_account_type": {
+      "type": "enumeration",
+      "enum": [
+        "current",
+        "saving"
+      ],
+      "required": true,
+      "default": "current"
+    },
+    "bank_upi_address": {
+      "type": "string",
+      "required": true
+    },
+    "uid": {
+      "type": "uid",
+      "required": false
+    },
+    "brands": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::brand.brand"
+    },
+    "parts_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parts-category.parts-category"
+    },
+    "parts_provider_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parts-provider-type.parts-provider-type"
+    },
+    "location_photos": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "owner_photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "aadhar_card": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "pancard": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gst_certificate": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "company_certificate": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
